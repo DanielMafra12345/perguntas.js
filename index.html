@@ -1,11 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo de Perguntas</title>
 </head>
 <body>
-    <p></p>
+    <h1> Quiz de TECNOLOGIA</h1>
+
+    <p>Este quiz é relacionado ao tema tecnologia! Você deverá responder com sabedoria!</p>
+
+    <p id = "perguntas">Clique Start!</p>
+
+    <button onclick="começar()">Start</button>
+    
+
+    <div id="botoes"></div>
+    <h2 id="respostas"></h2>
+    
+    <button onclick="começar2()">Próximo</button>
+    <button onclick="começar3()">Próximo</button>
+    <button onclick="começar4()">Próximo</button>
+
+    <script>
+
+        let pontos = 0;
+        let respostas = document.getElementById(respostas)
+
+        function começar(){
+            document.getElementById("perguntas").innerHTML = "Questão 1. O que é Java Script?"
+
+            document.getElementById("botoes").innerHTML = `
+            <button onclick="resposta1('A')">É uma marca de tênis</button>
+            <button onclick="resposta1('B')">Um computador</button>
+            <button onclick="resposta1('C')">Uma linguagem da progamação</button>
+        `;
+        }
+
+        function começar2(){
+            document.getElementById("perguntas").innerHTML = "Questão 2. O que é Python?"
+
+            document.getElementById("botoes").innerHTML = `
+            <button onclick="resposta2('A')">Uma cobra e uma linguagem da programação</button>
+            <button onclick="resposta2('B')">Um pato</button>
+            <button onclick="resposta2('C')">Um padre</button>
+            `;
+        }
+        
+        function começar3(){
+            document.getElementById("perguntas").innerHTML = "Questão 3. O que é Lourdes?"
+
+            document.getElementById("botoes").innerHTML = `
+            <button onclick="resposta3('A')">Uma avó</button>
+            <button onclick="resposta3('B')">Uma Alexa caipira</button>
+            <button onclick="resposta3('C')">Uma capivara</button>
+            `;
+        }
+
+        function começar4(){
+            document.getElementById("perguntas").innerHTML = "Questão 4. O que é Alexa?"
+
+            document.getElementById("botoes").innerHTML = `
+            <button onclick="resposta4('A')">Uma bola falante da Amazon</button>
+            <button onclick="resposta4('B')">Um cachorro</button>
+            <button onclick="resposta4('C')">Uma tia</button>
+          `;
+        }
+
+
+        function resposta1(opcao){
+            if (opcao == 'C'){
+                pontos++;
+                alert("Parabéns, você acertou!")
+                respostas.textContent = "Acertou!"
+                document.body.style.backgroundColor = "green"
+            }
+
+            else{
+            alert("Que pena, você errou!")
+            respostas.textContent = "Errou!"
+            document.body.style.backgroundColor = "red"
+            }
+        }
+
+        function resposta2(opcao){
+            if (opcao == 'A'){
+                pontos++;
+                alert("Parabéns, você acertou!")
+                respostas.textContent = "Acertou!"
+                document.body.style.backgroundColor = "green"
+            }
+
+            else{
+            alert("Que pena, você errou!")
+            respostas.textContent = "Errou!"
+            document.body.style.backgroundColor = "red"
+            }
+        }
+
+        function resposta3(opcao){
+            if (opcao == 'B'){
+                pontos++;
+                alert("Parabéns, você acertou!")
+                respostas.textContent =  "Acertou!"
+                document.body.style.backgroundColor = "green"
+            }
+
+            else{
+            alert("Que pena, você errou!")
+            respostas.textContent = "Errou!"
+            document.body.style.backgroundColor = "red"
+            }
+        }
+
+        function resposta4(opcao){
+            if (opcao == 'A'){
+                pontos++;
+                alert("Parabéns, você acertou!")
+                respostas.textContent =  "Acertou!"
+                document.body.style.backgroundColor = "green"
+            }
+
+            else{
+            alert("Que pena, você errou!")
+            respostas.textContent = "Errou!"
+            document.body.style.backgroundColor = "red"
+            }
+        }
+
+
+
+    </script>
+
 </body>
 </html>
